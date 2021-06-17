@@ -1,18 +1,18 @@
 
 import React from 'react';
-import { VieW ,Texto} from '../styles/style';
+import { Viu ,Texto} from '../styles/style';
 
 export default function ResultadoPorDiaScreen({ navigation }) {
 
     return (
-        <VieW>
+        <Viu>
             <Texto>ResultadoPor Dia</Texto>
             <Botao value="Documentacao" bottom="20px"
                     onPress={() => {
                     console.log('Clicou para voltar a documentacao');
                     navigation.navigate('Documentacao')
                 }} />
-        </VieW>
+        </Viu>
     );
 }
 

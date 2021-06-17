@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { TextInput } from 'react-native';
-import { VieW, Texto } from '../style/style'
+import { Viu, Texto } from '../style/style'
 import Botao from '../components/Botao';
 import DateTimePicker from '@react-native-community/datetimepicker'
 
@@ -9,22 +8,25 @@ export default function PorPeriodoScreen({ navigation, data }) {
     const [dataFim, setDataFim] = useState(new Date(1598051730000));
 
     const buscaPorPeriodo = (() => {
-    
+        console.log("buscando por periodo " + dataInicio + dataFim);
     });
 
+    const limpaLista = (() => {
+
+    });
 
     const onChange = (event, selectedDate) => {
 
     };
 
     return (
-        <VieW>
-            <Texto>Data Inicio</Texto>     
+        <Viu>
+            <Texto>Data Inicio</Texto>
             <DateTimePicker
                 testID="dataInicioPicker"
                 value={dataInicio}
                 onChange={onChange}
-                style={{width: 200}}
+                style={{ width: 200 }}
                 mode="date"
                 placeholder="select date"
                 format="YYYY-MM-DD"
@@ -47,9 +49,9 @@ export default function PorPeriodoScreen({ navigation, data }) {
                 confirmBtnText="Confirm"
                 cancelBtnText="Cancel"
             />
-            <Botao bottom="400px"
+            <Botao bottom="20px"
                 value="Pesquisar"
                 onPress={buscaPorPeriodo} />
-        </VieW>
+        </Viu>
     );
 }

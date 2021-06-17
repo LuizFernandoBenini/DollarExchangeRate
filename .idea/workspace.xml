@@ -7,6 +7,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1rzFmhQQnagH3ISYzA8V6rL93nE" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -35,5 +38,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="845" y="382" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1619971270796" />
+    <state x="336" y="214" width="1200" height="806" key="AVDManager" timestamp="1623936474547">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="336" y="214" width="1200" height="806" key="AVDManager/0.0.1920.1040@0.0.1920.1040" timestamp="1623936474547" />
   </component>
 </project>
