@@ -3,21 +3,25 @@ import { Viu, Texto } from '../style/style'
 import Botao from '../components/Botao';
 import DateTimePicker from '@react-native-community/datetimepicker'
 
-export default function PorPeriodoScreen({ navigation, data }) {
+export default function PorPeriodoScreen({ navigation }) {
     const [dataInicio, setDataInicio] = useState(new Date(1598051730000));
     const [dataFim, setDataFim] = useState(new Date(1598051730000));
+    const [rate, setRate] = useState([]);
 
     const buscaPorPeriodo = (() => {
         console.log("buscando por periodo " + dataInicio + dataFim);
+
+        const urlPorPeriodo= `https://economia.awesomeapi.com.br/json/daily/USD-BRL/?start_date=${dataInicio}&end_date=${dataFim}`;
+
+        axios
+        .get(`${urlPorPeriodo}`)
+        .then((response) => {
+            setRate(response.data);
+        })
+        .catch((error) => console.error(`Error: ${error}`));
+
+        navigation.navigate("Periodo");
     });
-
-    const limpaLista = (() => {
-
-    });
-
-    const onChange = (event, selectedDate) => {
-
-    };
 
     return (
         <Viu>
@@ -25,7 +29,7 @@ export default function PorPeriodoScreen({ navigation, data }) {
             <DateTimePicker
                 testID="dataInicioPicker"
                 value={dataInicio}
-                onChange={onChange}
+                onChange={(dataInicio) => setDataInicio(dataInicio)}
                 style={{ width: 200 }}
                 mode="date"
                 placeholder="select date"
@@ -40,7 +44,7 @@ export default function PorPeriodoScreen({ navigation, data }) {
             <DateTimePicker
                 testID="dataFimPicker"
                 value={dataFim}
-                onChange={onChange}
+                onChange={(dataFim) => setDataFim(dataFim)}
                 mode="date"
                 placeholder="select date"
                 format="YYYY-MM-DD"
