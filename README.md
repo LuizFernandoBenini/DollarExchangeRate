@@ -1,4 +1,4 @@
-# ReactDollarQuotation
+# ReactNative - DollarExchangeRate
 Aplicação que consome uma Api de cotação do Dolar por período ou passando quantos dias passados deseja ver.
 
 Url Api: https://docs.awesomeapi.com.br/api-de-moedas
@@ -19,5 +19,5 @@ Url Api: https://docs.awesomeapi.com.br/api-de-moedas
 		yarn add @react-native-community/datetimepicker
 		yarn add @react-navigation/native
 		yarn add @react-navigation/stack
-	
+	        yarn add axios
 	
