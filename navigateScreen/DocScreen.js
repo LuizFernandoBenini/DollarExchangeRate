@@ -10,25 +10,26 @@ export default function DocScreen({ navigation }) {
     const urlLastRate = `https://economia.awesomeapi.com.br/last/USD-BRL`;
 
     useEffect(() => {
-         getLastRate();
+        getLastRate();
     });
 
-    const getLastRate = () => {
+    async function getLastRate() {
         console.log("buscando valor do real nos ultimos 30 segundos");
 
         axios
             .get(`${urlLastRate}`)
-            .then((response) => {    
+            .then((response) => {
                 setAtualRate(response.data.USDBRL);
-                console.log(' texto ', atualRate); 
+
             })
             .catch((error) => console.error(`Error: ${error}`));
-        
+
     };
 
-    const renderItemComponent =  ({ item }) =>  {
+    function renderItemComponent(item) {
 
         return (
+
             <Viu
                 style={{
                     marginTop: 1.5,
@@ -36,21 +37,36 @@ export default function DocScreen({ navigation }) {
                     borderWidth: 3,
                     borderColor: '#20232a',
                     borderRadius: 5,
+                    height: '100%',
                     alignItems: 'center',
-                    width: '100%',
+                    width: '100%'
                 }}>
-                <Text>Mínima: {item ?  item.high : '' }</Text>
-                <Text>Máxima: {item ? item.low : ''}</Text>
-                <Text>Variação: {item ? item.varBid : ''}</Text>
+                <Text>Mínima: {item ? item.high : '?'}</Text>
+                <Text>Máxima: {item ? item.low : '?'}</Text>
+                <Text>Variação: {item ? item.varBid : '?'}</Text>
             </Viu>
         );
     }
 
     return (
-        <Viu>
-            <Texto>Tela de documentacao</Texto>
+        <Viu >
+
             {renderItemComponent(atualRate)}
-           <Botao value="Por Dia" bottom="60px"
+            <Texto>Tela de documentação</Texto >
+            <Text >
+                Necessário instalar yarn e expo{"\n"}
+                {"\n"}
+                Use o comando "yarn start" para iniciar o projeto{"\n"}
+                {"\n"}
+                Pacotes{"\n"}
+                npm install --global yarn{"\n"}
+                npm install --global expo-cli{"\n"}
+                yarn add @react-native-community/datetimepicker{"\n"}
+                yarn add @react-navigation/native{"\n"}
+                yarn add @react-navigation/stack{"\n"}
+                yarn add axios{"\n"}
+            </Text>
+            <Botao value="Por Dia" bottom="60px"
                 onPress={() => {
                     console.log('clicou Por dia');
                     navigation.navigate('Dias')
@@ -60,7 +76,7 @@ export default function DocScreen({ navigation }) {
                     console.log('clicou Por Periodo ');
                     navigation.navigate('Periodo');
                 }} />
-  
-        </Viu>
+
+        </Viu >
     );
 }

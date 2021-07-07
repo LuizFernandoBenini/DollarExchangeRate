@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3298c620-3ac3-4783-8813-e017d1990cd1" name="Default Changelist" comment="" />
+    <list default="true" id="3298c620-3ac3-4783-8813-e017d1990cd1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navigateScreen/DocScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigateScreen/DocScreen.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,9 +41,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="845" y="382" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1619971270796" />
-    <state x="336" y="214" width="1200" height="806" key="AVDManager" timestamp="1623969078622">
+    <state x="-52" y="214" width="1200" height="806" key="AVDManager" timestamp="1625694467794">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="336" y="214" width="1200" height="806" key="AVDManager/0.0.1920.1040@0.0.1920.1040" timestamp="1623969078622" />
+    <state x="-52" y="214" width="1200" height="806" key="AVDManager/0.0.1920.1040@0.0.1920.1040" timestamp="1625694467794" />
   </component>
 </project>
